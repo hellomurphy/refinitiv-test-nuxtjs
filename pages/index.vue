@@ -1,6 +1,6 @@
 <template>
-  <div class="flex">
-    <div class="flex-1 w-200 bg-red-200">
+  <div class="flex overflow-auto">
+    <div class="flex-none w-200 bg-red-200">
       <input
         type="number"
         id="number"
@@ -19,14 +19,14 @@
         @blur="checkIsInteger(), checkNumber(typeCheck)"
       />
     </div>
-    <div class="flex-1 w-100 bg-blue-200">
-      <select @click="(event) => checkNumber(event.target.value)">
+    <div class="w-full bg-blue-200 ">
+      <select @click="(event) => checkNumber(event.target.value)" >
         <option value=""></option>
         <option value="isPrime">IsPrime</option>
         <option value="isFibonacci">IsFibonacci</option>
       </select>
     </div>
-    <div class="flex-1 w-300 bg-green-200">{{ result }}</div>
+    <div class="flex-none w-300 bg-green-200">{{ result }}</div>
   </div>
 </template>
 
